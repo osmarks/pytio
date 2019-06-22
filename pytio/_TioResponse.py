@@ -26,7 +26,7 @@ class TioResponse:
             self._error = None
             self._result = self._splitdata[1]
 
-        if self._splitdata[2] or self._splitdata[2] != b'':
+        if len(self._splitdata) > 2 or self._splitdata[2] != b'':
             self._debug = self._splitdata[2]
 
     @property
